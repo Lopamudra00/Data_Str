@@ -1,0 +1,4 @@
+polymorphism= poly + morphism
+             (many)   (forms)
+             ex:rahul has various hobbies
+              

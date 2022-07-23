@@ -1,0 +1,8 @@
+Properties of Linked List 
+> Size can be modified
+> Non - contiguous memory
+> Insertion and deletion at any point is easier 
+
+STRUCTURE 
+data->next
+> head stores the adress of first node of the List

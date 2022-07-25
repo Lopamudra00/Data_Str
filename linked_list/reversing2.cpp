@@ -1,5 +1,3 @@
-// ITERATIVE METHOD
-
 #include <iostream>
 using namespace std;
 
@@ -39,7 +37,7 @@ node *reverseRecursive(node *&head)
         return head;
     }
     node *newhead = reverseRecursive(head->next);
-    newhead->next->next = head;
+    head->next->next = head;
     head->next = NULL;
     return newhead;
 }

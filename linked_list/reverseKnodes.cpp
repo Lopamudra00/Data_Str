@@ -65,7 +65,6 @@ node *reverseK(node *&head, int k)
         curr = nextptr;
         count++;
     }
-
     if (nextptr != NULL)
     {
         head->next = reverseK(nextptr, k);

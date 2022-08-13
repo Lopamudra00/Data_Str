@@ -56,6 +56,31 @@ int LCA(Node *root, int n1, int n2)
     return path1[pc - 1];
 }
 
+Node *LCA2(Node *root, int n1, int n2)
+{
+    if (root == NULL)
+    {
+        return NULL;
+    }
+    if (root->data == n1 || root->data == n2)
+    {
+        return root;
+    }
+
+    Node *leftLCA = LCA2(root->left, n2, n1);
+    Node *rightLCA = LCA2(root->right, n2, n1);
+    if (leftLCA && rightLCA)
+    {
+        return root;
+    }
+
+    if (leftLCA != NULL)
+    {
+        return leftLCA;
+    }
+    return rightLCA;
+}
+
 int main()
 {
     Node *root = new Node(1);
@@ -67,18 +92,16 @@ int main()
     root->right->left->left = new Node(7);
     int n1 = 7;
     int n2 = 6;
-    int lca = LCA(root, n1, n2);
+    Node *lca = LCA2(root, n1, n2);
 
-    if (lca == -1)
+    if (lca == NULL)
     {
         cout << "LCA doesn't exist" << endl;
     }
     else
     {
-        cout << "LCA : " << lca << endl;
+        cout << "LCA : " << lca->data << endl;
     }
 
     return 0;
 }
-
-// Time complexity= 0(n)

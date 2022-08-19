@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 void fib(int n)
 {
     int t1 = 0;

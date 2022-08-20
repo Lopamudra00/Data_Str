@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int fact(int n)
 {
     int factorial = 1;

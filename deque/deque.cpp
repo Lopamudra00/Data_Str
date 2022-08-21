@@ -21,6 +21,5 @@ int main()
     }
     cout << endl;
     cout << dq.size() << endl;
-
     return 0;
 }

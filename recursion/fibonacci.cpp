@@ -9,7 +9,6 @@ int Fib(int n)
 
     return Fib(n - 1) + Fib(n - 2);
 }
-
 int main()
 {
     int n;
